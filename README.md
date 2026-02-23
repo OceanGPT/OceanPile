@@ -19,10 +19,17 @@
 - 02-2026, we launched the OceanPile project.
 
 **Contents:**
+- [🌟Overview](#-overview)
 - [🔔 News](#-news)
 - [📺 Quick Start](#-quick-start)
 - [📚 Datasets](#-datasets)
 - [🚩 Citation](#-citation)
+
+# 🌟 Overview
+
+<div align="center">
+<img src="assets/framework.png" width="90%">
+</div>
 
 # 📺 Quick Start
 ```

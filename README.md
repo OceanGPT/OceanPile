@@ -64,36 +64,20 @@ ds = load_dataset(
 ```
 # 📚 DataSets
 ### 📘 Dataset Summary
-|                              | # images | # docs | # tokens | Download |
-|------------------------------|----------|--------|----------|----------|
-| OceanCorpus                  | 571M     | 101.2M | 43B      | [🤗 Download](https://huggingface.co/datasets/zjunlp) |
-| OceanInstruction (textual data)       | -        | 77.7M  | 33B      | [🤗 Download](https://huggingface.co/datasets/zjunlp) |
-| OceanInstruction (visual data)       | 29.9M    | 7.3M   | 2.4B     | [🤗 Download](https://huggingface.co/datasets/zjunlp) |
-| OceanInstruction (task-specific data) | 29.9M    | 7.3M   | 2.4B     | [🤗 Download](https://huggingface.co/datasets/zjunlp) |
-| OceanBench                   | 29.9M    | 7.3M   | 2.4B     | [🤗 Download](https://huggingface.co/datasets/zjunlp) |
+|                              | # images | # samples | # tokens | Download |
+|------------------------------|----------|-----------|----------|----------|
+| OceanCorpus                  | -        | 101.2M    | 43B      | [🤗 Download](https://huggingface.co/datasets/zjunlp) |
+| OceanInstruction (textual data)       | -        | 77.7M     | -        | [🤗 Download](https://huggingface.co/datasets/zjunlp) |
+| OceanInstruction (visual data)       | 29.9M    | 7.3M      | -        | [🤗 Download](https://huggingface.co/datasets/zjunlp) |
+| OceanInstruction (task-specific data) | 29.9M    | 7.3M      | -        | [🤗 Download](https://huggingface.co/datasets/zjunlp) |
+| OceanBench                   | 29.9M    | 7.3M      | -        | [🤗 Download](https://huggingface.co/datasets/zjunlp) |
 
 More details about these datasets and our processing steps [can be found in our paper](https://arxiv.org/abs).
 ### 🏗️ Dataset Structure
 - **image** : high-resolution image croped from oceanography paper/webstite/dataset (open-assess)
 
 ### 🔏 License
-This dataset is released under
-[Creative Commons Attribution–NonCommercial–ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
-
-- **NonCommercial**
-  - This dataset may not be used for commercial purposes. Prohibited uses include, but are not limited to, selling the dataset, incorporating it into commercial products or services, or using it in workflows whose primary purpose is to obtain direct commercial advantage.
-
-- **Share Alike**
-  - If you remix, transform, or build upon this dataset, or distribute adapted versions of it, you must release your contributions under the same CC BY-NC-SA 4.0 license.
-
-- **Important Notes**
-
-  - The source papers for this dataset are published under open-access licenses, and the data are likewise subject to the licensing terms of the original papers.
-
-  - Models trained using this dataset should respect the NonCommercial restriction when used or redistributed.
-
-  - Users are responsible for ensuring compliance with the license in their specific use cases.
-
+This dataset is released under MIT License.
 
 # 🚩 Citation
 

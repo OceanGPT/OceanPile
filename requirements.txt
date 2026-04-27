@@ -1,0 +1,10 @@
+torch
+torchvision
+transformers
+sentence-transformers
+accelerate
+bitsandbytes
+openai
+datasets
+huggingface_hub
+qwen_vl_utils

@@ -15,7 +15,7 @@
 **OceanPile**, a large-scale multimodal corpus designed for ocean intelligence. It comprises three key components: **OceanCorpus**, a unified collection integrating sonar data, underwater imagery, marine science visuals, and scientific text from diverse authoritative sources; **OceanInstruction**, a high-quality instruction dataset synthesized via a novel pipeline guided by a hierarchical **Ocean Concept Knowledge Graph**; and **OceanBench**, a manually curated evaluation benchmark for rigorous assessment.
 
 # 🔔 News
-- 03-2026, We released the OceanPile [models](https://huggingface.co/collections/zjunlp/oceanpile).
+- 04-2026, We released the OceanPile [models](https://huggingface.co/collections/zjunlp/oceanpile).
 - 03-2026, We released the OceanPile [datasets](https://huggingface.co/collections/zjunlp/oceanpile).
 - 02-2026, We launched the OceanPile project.
 

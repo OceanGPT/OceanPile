@@ -198,8 +198,18 @@ If this OceanPile paper or datasets is helpful, please kindly cite as this:
 
 ```
 
-💐 Citation for Models:
+💐 Citations for our other related works:
 ```bibtex
+@misc{xue2025oceangymbenchmarkenvironmentunderwater,
+      title={OceanGym: A Benchmark Environment for Underwater Embodied Agents}, 
+      author={Yida Xue and Mingjun Mao and Xiangyuan Ru and Yuqi Zhu and Baochang Ren and Shuofei Qiao and Mengru Wang and Shumin Deng and Xinyu An and Ningyu Zhang and Ying Chen and Huajun Chen},
+      year={2025},
+      eprint={2509.26536},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2509.26536}, 
+}
+
 @article{bi2024oceangpt,
   title={OceanGPT: A Large Language Model for Ocean Science Tasks},
   author={Bi, Zhen and Zhang, Ningyu and Xue, Yida and Ou, Yixin and Ji, Daxiong and Zheng, Guozhou and Chen, Huajun},

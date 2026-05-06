@@ -48,8 +48,11 @@ More details about these datasets can be found in our [Paper](https://arxiv.org/
 | Model Name                       | Domain             | Download                                                                      |
 |----------------------------------|--------------------|-------------------------------------------------------------------------------|
 | OceanGPT-o-OceanPile-Sci      | Marine Science VQA | [🤗 Download](https://huggingface.co/zjunlp/OceanGPT-o-8B-OceanPile-Sci)      |
+| OceanGPT-basic-OceanPile-Sci | Marine Science QA  | [🤗 Download](https://huggingface.co/zjunlp/OceanGPT-basic-30B-OceanPile-Sci) |
 | OceanGPT-o-OceanPile-Sonar    | Sonar Image VQA    | [🤗 Download](https://huggingface.co/zjunlp/OceanGPT-o-8B-OceanPile-Sonar)    |
 | OceanGPT-o-OceanPile-Bio      | Marine Biology VQA | [🤗 Download](https://huggingface.co/zjunlp/OceanGPT-o-8B-OceanPile-Bio)      |
+
+
 # 🌊 Quick Start Guide
 
 ## 📦 Environment Setup
@@ -117,7 +120,7 @@ processor = AutoProcessor.from_pretrained("zjunlp/OceanGPT-o-8B-OceanPile-Sci")
 
 ---
 
-## 🖼️ Inference
+## 🖼️ Inference for MLLMs (Multimodal)
 
 ```python
 from transformers import Qwen3VLForConditionalGeneration, AutoProcessor
@@ -166,6 +169,56 @@ output_text = processor.batch_decode(
 )
 print(output_text)
 ```
+
+---
+
+## 💬 Inference for LLMs (Text-only)
+
+```python
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+model_name = "zjunlp/OceanGPT-basic-30B-OceanPile-Sci"
+
+# Load tokenizer and model
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForCausalLM.from_pretrained(
+    model_name,
+    torch_dtype="auto",
+    device_map="auto"
+)
+
+question = "<Your Question>"
+messages = [{"role": "user", "content": question}]
+
+# Apply chat template
+text = tokenizer.apply_chat_template(
+    messages,
+    tokenize=False,
+    add_generation_prompt=True,
+    enable_thinking=False
+)
+
+# Tokenize and generate
+model_inputs = tokenizer([text], return_tensors="pt").to(model.device)
+
+generated_ids = model.generate(
+    **model_inputs,
+    max_new_tokens=8192
+)
+
+# Extract and decode output
+output_ids = generated_ids[0][len(model_inputs.input_ids[0]):].tolist()
+
+# Remove thinking tokens if present
+try:
+    index = len(output_ids) - output_ids[::-1].index(151668)  # </think> token ID
+except ValueError:
+    index = 0
+
+content = tokenizer.decode(output_ids[index:], skip_special_tokens=True).strip("\n")
+print(content)
+```
+
 
 ---
 

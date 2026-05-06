@@ -195,8 +195,15 @@ This dataset is released under MIT License.
 If this OceanPile paper or datasets is helpful, please kindly cite as this:
 
 ```bibtex
-
-
+@misc{xue2026oceanpilelargescalemultimodalocean,
+      title={OceanPile: A Large-Scale Multimodal Ocean Corpus for Foundation Models}, 
+      author={Yida Xue and Ningyu Zhang and Tingwei Wu and Zhe Ma and Daxiong Ji and Zhao Wang and Guozhou Zheng and Huajun Chen},
+      year={2026},
+      eprint={2605.00877},
+      archivePrefix={arXiv},
+      primaryClass={cs.MM},
+      url={https://arxiv.org/abs/2605.00877}, 
+}
 ```
 
 💐 Citations for our other related works:

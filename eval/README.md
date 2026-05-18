@@ -3,7 +3,7 @@
 | # | Task Type | Description |
 |---|-----------|-------------|
 | 1 | **Marine Science QA** | Text-based question answering on marine science topics |
-| 2 | **Marine Biology VQA** | Visual question answering for marine biology images |
+| 2 | **Marine Science VQA** | Visual question answering on marine science topics |
 | 3 | **Sonar Image VQA** | Visual question answering for sonar images |
 | 4 | **Marine Biology VQA** | Visual question answering for marine biology specimens |
 
@@ -14,12 +14,12 @@ python eval/sci_eval.py --input_dir "YOUR_DATA_DIR" --type qa --eval_model gpt-4
 
 ### 🟢 Marine Science QA Evaluation (API)
 ```bash
-python eval/eval.py --input_dir "YOUR_DATA_DIR" --type vqa --eval_model gpt-4o
+python eval/sci_eval.py --input_dir "YOUR_DATA_DIR" --type vqa --eval_model gpt-4o
 ```
 
 ### 🔵 Marine Science VQA Evaluation (Local Model)
 ```bash
-python eval/eval.py --input_dir "YOUR_DATA_DIR" --type vqa \
+python eval/sci_eval.py --input_dir "YOUR_DATA_DIR" --type vqa \
     --eval_model qwen3-vl --local \
     --local_model_path "YOUR_LOCAL_MODEL_PATH"
 ```
